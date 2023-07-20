@@ -1,13 +1,5 @@
-import React, { PureComponent } from "react";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import React from "react";
+import { AreaChart, Area } from "recharts";
 import { styled } from "@mui/material/styles";
 
 const data = [

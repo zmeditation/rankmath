@@ -33,6 +33,9 @@ const StyledCustomTypography = styled(Typography)(({ theme }) => ({
   "&.white": {
     color: "#FFFFFF",
   },
+  "&.large1.mini-size": {
+    fontSize: "24px",
+  },
 }));
 
 const CustomTypography: React.FC<CustomTypographyProps> = ({
@@ -40,8 +43,26 @@ const CustomTypography: React.FC<CustomTypographyProps> = ({
   color,
   type,
 }) => {
+  const [windowHeight, setWindowHeight] = React.useState(window.innerHeight);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <StyledCustomTypography className={`${color} ${type}`}>
+    <StyledCustomTypography
+      className={
+        windowHeight <= 667 ? `${color} ${type} mini-size` : `${color} ${type}`
+      }
+    >
       {children}
     </StyledCustomTypography>
   );

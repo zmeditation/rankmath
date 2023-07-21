@@ -38,6 +38,12 @@ const StyledHeader = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down(500)]: {
     paddingBottom: "10px",
   },
+  "&.mini-size": {
+    paddingBottom: "10px",
+    "& .header-text": {
+      fontSize: "20px",
+    },
+  },
 }));
 
 const StyledArrowIcon = styled(ChevronLeftSharpIcon)(({ theme }) => ({
@@ -115,6 +121,20 @@ const StyledMenu = styled((props: MenuProps) => (
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [windowHeight, setWindowHeight] = React.useState(window.innerHeight);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -123,7 +143,7 @@ const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <StyledHeader>
+    <StyledHeader className={windowHeight <= 667 ? "mini-size" : ""}>
       <StyledPhoneImg src="/img/header.png" />
       <div className="button-group">
         <StyledIconBtn>

@@ -65,10 +65,34 @@ const StyledFooterBtnGroup = styled(Box)(({ theme }) => ({
       },
     },
   },
+  "&.mini-size": {
+    margin: "10px 0px",
+    "& .MuiButtonBase-root": {
+      "& i": {
+        fontSize: "20px",
+      },
+      "& svg": {
+        fontSize: "22px",
+      },
+    },
+  },
 }));
 
 const Footer = () => {
   const alignment = "wallet";
+  const [windowHeight, setWindowHeight] = React.useState(window.innerHeight);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
@@ -78,7 +102,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledPhoneImg src="/img/footer.png" />
-      <StyledFooterBtnGroup>
+      <StyledFooterBtnGroup className={windowHeight <= 667 ? "mini-size" : ""}>
         <ToggleButtonGroup
           color="primary"
           value={alignment}

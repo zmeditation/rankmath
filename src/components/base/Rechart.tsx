@@ -19,7 +19,6 @@ const StyledRechart = styled("div")(({ theme }) => ({
 const CustomizedDot = (props: any) => {
   const { cx, cy, value } = props;
   if (value[1].toString() === "5.483") {
-    console.log(cx, cy);
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

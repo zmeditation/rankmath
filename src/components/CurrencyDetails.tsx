@@ -33,6 +33,7 @@ const StyledToggleDate = styled(Box)(({ theme }) => ({
     color: "#AEB8C4",
     padding: "2px 10px",
     height: "fit-content",
+    lineHeight: 1.3,
     "&:hover": {
       borderRadius: "50px !important",
     },

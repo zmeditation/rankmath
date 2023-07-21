@@ -60,7 +60,7 @@ const CustomTypography: React.FC<CustomTypographyProps> = ({
   return (
     <StyledCustomTypography
       className={
-        windowHeight <= 667 ? `${color} ${type} mini-size` : `${color} ${type}`
+        windowHeight < 667 ? `${color} ${type} mini-size` : `${color} ${type}`
       }
     >
       {children}

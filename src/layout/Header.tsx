@@ -36,9 +36,11 @@ const StyledHeader = styled(Box)(({ theme }) => ({
     height: "fit-content",
   },
   [theme.breakpoints.down(500)]: {
+    padding: "0px 10px",
     paddingBottom: "10px",
   },
   "&.mini-size": {
+    padding: "0px 10px",
     paddingBottom: "10px",
     "& .header-text": {
       fontSize: "20px",
@@ -143,7 +145,7 @@ const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <StyledHeader className={windowHeight <= 667 ? "mini-size" : ""}>
+    <StyledHeader className={windowHeight < 667 ? "mini-size" : ""}>
       <StyledPhoneImg src="/img/header.png" />
       <div className="button-group">
         <StyledIconBtn>

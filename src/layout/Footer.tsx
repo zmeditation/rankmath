@@ -102,7 +102,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledPhoneImg src="/img/footer.png" />
-      <StyledFooterBtnGroup className={windowHeight <= 667 ? "mini-size" : ""}>
+      <StyledFooterBtnGroup className={windowHeight < 667 ? "mini-size" : ""}>
         <ToggleButtonGroup
           color="primary"
           value={alignment}

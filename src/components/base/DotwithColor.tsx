@@ -7,6 +7,7 @@ type DotwithColorProps = {
 
 const StyledDotwithColor = styled("div")(({ theme }) => ({
   position: "relative",
+  marginBottom: "-2px",
   height: "100px",
   borderRadius: "50%",
   border: "3px solid rgba(255, 193, 61, 0.26)",

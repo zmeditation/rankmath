@@ -18,7 +18,7 @@ const StyledToggleArea = styled(Box)(({ theme }) => ({
 }));
 
 const StyledToggleDate = styled(Box)(({ theme }) => ({
-  margin: "10px 0px",
+  margin: "15px 0px",
   "& .MuiToggleButtonGroup-root": {
     justifyContent: "space-between",
     width: "100%",

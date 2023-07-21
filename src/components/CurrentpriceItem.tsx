@@ -14,6 +14,7 @@ const StyledCurrentpriceItem = styled(Box)(({ theme }) => ({
   position: "absolute",
   bottom: "20px",
   zIndex: 1,
+  gap: "10px",
 }));
 
 const CurrentpriceItem: React.FC<CurrentpriceItemProps> = ({ price }) => {

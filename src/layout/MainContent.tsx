@@ -26,7 +26,7 @@ const MainContent = () => {
         updateShowStatus={updateShowStatus}
         showDetails={showDetails}
       />
-      {showDetails && <CurrencyDetails />}
+      {<CurrencyDetails showDetails={showDetails} />}
     </StyledMainContent>
   );
 };

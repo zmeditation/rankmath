@@ -4,11 +4,18 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Card from "./base/Card";
-import BuySellCard from "./BuySellCard";
+import BuySellButton from "./BuySellButton";
 import LimitpriceItem from "./LimitpriceItem";
 import CurrentpriceItem from "./CurrentpriceItem";
 import { BTCprice } from "../config/mock";
 import Rechart from "./base/Rechart";
+
+const StyledToggleArea = styled(Box)(({ theme }) => ({
+  animation: "fadein 1.5s linear forwards",
+  "&.none": {
+    animation: "fadeout 1s linear forwards",
+  },
+}));
 
 const StyledToggleDate = styled(Box)(({ theme }) => ({
   margin: "10px 0px",
@@ -51,7 +58,11 @@ const BalancesMinMax = styled(Box)(({ theme }) => ({
   justifyContent: "space-between",
 }));
 
-const CurrencyDetails = () => {
+type CurrencyDetailsProps = {
+  showDetails: boolean;
+};
+
+const CurrencyDetails: React.FC<CurrencyDetailsProps> = ({ showDetails }) => {
   const [alignment, setAlignment] = React.useState("day");
   const [lowprice, setLowprice] = React.useState("0");
   const [highprice, setHighprice] = React.useState("0");
@@ -78,7 +89,7 @@ const CurrencyDetails = () => {
   }, []);
 
   return (
-    <div>
+    <StyledToggleArea className={!showDetails ? "none" : ""}>
       <StyledToggleDate>
         <ToggleButtonGroup
           color="primary"
@@ -110,10 +121,10 @@ const CurrencyDetails = () => {
         <Rechart dateType={alignment} />
       </Card>
       <StyledBuySellGroup>
-        <BuySellCard type="buy" />
-        <BuySellCard type="sell" />
+        <BuySellButton type="buy" />
+        <BuySellButton type="sell" />
       </StyledBuySellGroup>
-    </div>
+    </StyledToggleArea>
   );
 };
 

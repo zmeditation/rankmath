@@ -21,121 +21,121 @@ export const priceData = {
   day: [
     {
       name: "Page A",
-      uv: 4000,
+      uv: 4.895,
     },
     {
       name: "Page B",
-      uv: 3000,
+      uv: 5.995,
     },
     {
       name: "Page C",
-      uv: 2000,
+      uv: 4.895,
     },
     {
       name: "Page D",
-      uv: 2780,
+      uv: 5.857,
     },
     {
       name: "Page E",
-      uv: 1890,
+      uv: 6.857,
     },
     {
       name: "Page F",
-      uv: 2390,
+      uv: 6.557,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 5.483,
     },
   ],
   week: [
     {
       name: "Page A",
-      uv: 4000,
+      uv: 5.612,
     },
     {
       name: "Page B",
-      uv: 3000,
+      uv: 5.212,
     },
     {
       name: "Page C",
-      uv: 2000,
+      uv: 5.012,
     },
     {
       name: "Page D",
-      uv: 2780,
+      uv: 5.953,
     },
     {
       name: "Page E",
-      uv: 1890,
+      uv: 6.253,
     },
     {
       name: "Page F",
-      uv: 2390,
+      uv: 5.953,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 5.483,
     },
   ],
   month: [
     {
       name: "Page A",
-      uv: 4000,
+      uv: 6.351,
     },
     {
       name: "Page B",
-      uv: 3000,
+      uv: 6.051,
     },
     {
       name: "Page C",
-      uv: 2000,
+      uv: 5.351,
     },
     {
       name: "Page D",
-      uv: 2780,
+      uv: 4.578,
     },
     {
       name: "Page E",
-      uv: 1890,
+      uv: 6.201,
     },
     {
       name: "Page F",
-      uv: 2390,
+      uv: 5.965,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 5.483,
     },
   ],
   year: [
     {
       name: "Page A",
-      uv: 4000,
+      uv: 6.784,
     },
     {
       name: "Page B",
-      uv: 3000,
+      uv: 6.684,
     },
     {
       name: "Page C",
-      uv: 2000,
+      uv: 6.484,
     },
     {
       name: "Page D",
-      uv: 2780,
+      uv: 5.084,
     },
     {
       name: "Page E",
-      uv: 1890,
+      uv: 5.584,
     },
     {
       name: "Page F",
-      uv: 2390,
+      uv: 5.369,
     },
     {
       name: "Page G",
-      uv: 3490,
+      uv: 5.483,
     },
   ],
 };

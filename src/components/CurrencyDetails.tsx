@@ -55,6 +55,7 @@ const CurrencyDetails = () => {
   const [alignment, setAlignment] = React.useState("day");
   const [lowprice, setLowprice] = React.useState("0");
   const [highprice, setHighprice] = React.useState("0");
+  const currentPrice = "5.483";
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
@@ -105,7 +106,7 @@ const CurrencyDetails = () => {
           <LimitpriceItem type="low" price={lowprice} />
           <LimitpriceItem type="high" price={highprice} />
         </BalancesMinMax>
-        <CurrentpriceItem price="5.483" />
+        <CurrentpriceItem price={currentPrice} />
         <Rechart dateType={alignment} />
       </Card>
       <StyledBuySellGroup>
